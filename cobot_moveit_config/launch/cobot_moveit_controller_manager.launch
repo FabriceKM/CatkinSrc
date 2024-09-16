@@ -1,0 +1,9 @@
+<launch>
+
+    <arg name="moveit_controller_manager" default="moveit_simple_controller_manager/MoveitSimpleControllerManager"/>
+    <param name = "moveit_controller_manager" value = "${arg moveit_controller_manager}"/>
+
+    <!-- load ros_controllers to the param server -->
+    <rosparam file="$(find cobot_moveit_config)/config/ros_controllers.yaml"/>
+
+</launch>
